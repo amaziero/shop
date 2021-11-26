@@ -1,0 +1,13 @@
+{
+  "name": "backend-shop",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Alison Maziero <alison_lens@hotmail.com>",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
