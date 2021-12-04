@@ -1,8 +1,10 @@
 import dotenv from 'dotenv'
 import express from 'express'
+import conncetDB from './config/db.js'
 import products from './data/products.js'
 
 dotenv.config()
+conncetDB()
 
 const app = express()
 
