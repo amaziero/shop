@@ -5,7 +5,7 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeCart } from '../actions/cartActions'
 
-const CartScreen = ({match, location, hisotry}) => {
+const CartScreen = ({match, location, history}) => {
 	const productId = match.params.id
 	const quantity = location.search ? Number(location.search.split('=')[1]) : 1
 	const dispatch = useDispatch()
@@ -24,7 +24,7 @@ const CartScreen = ({match, location, hisotry}) => {
 	}
 
 	const checkOutHandler = () => {
-		hisotry.push('/login?redirect=shipping')
+		history.push('/login?redirect=shipping')
 	}
 
 	return (
