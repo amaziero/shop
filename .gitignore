@@ -10,7 +10,7 @@ node_modules/
 /coverage
 
 # production
-/build
+/frontend/build
 
 # misc
 .DS_Store
@@ -27,3 +27,8 @@ yarn-error.log*
 
 # Imagens folder
 frontend/public/images/*
+upload/
+
+# errors files
+*.swo
+*.swp

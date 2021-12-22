@@ -18,6 +18,7 @@ import UserListScreen from './screens/admin/UserListScreen'
 import UserEditScreen from './screens/admin/UserEditScreen'
 import ProductListScreen from './screens/admin/ProductListScreen'
 import ProductEditScreen from './screens/admin/ProductEditScreen'
+import OrderListScreen from './screens/admin/OrderListScreen'
 
 function App() {
   return (
@@ -35,12 +36,22 @@ function App() {
               <Route path='/profile' component={ProfileScreen} />
               <Route path='/product/:id' component={ProductScreen} />
               <Route path='/cart/:id?' component={CartScreen} />
-              <Route path='/' component={HomeScreen} exact />
               
               <Route path='/admin/userList' component={UserListScreen} />
               <Route path='/admin/user/:id/edit' component={UserEditScreen} />
-              <Route path='/admin/productList' component={ProductListScreen} />
+              <Route path='/admin/productList' component={ProductListScreen} exact />
+              <Route path='/admin/productList/:pageNumber' component={ProductListScreen} exact />
               <Route path='/admin/product/:id/edit' component={ProductEditScreen} />
+              <Route path='/admin/orderList' component={OrderListScreen} />
+
+              <Route path='/' component={HomeScreen} exact />
+              <Route path='/search/:keyword' component={HomeScreen} exact />
+              <Route path='/page/:pageNumber' component={HomeScreen} exact />
+              <Route
+                path='/search/:keyword/page/:pageNumber'
+                component={HomeScreen}
+                exact
+              />
             </Container>
           </main>
         <Footer />
